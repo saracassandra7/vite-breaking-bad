@@ -28,7 +28,7 @@ export default {
       </div>
     </div>
     <div class="row" v-if="store.isLoaded">
-      <CharacterCard v-for="character in store.charactersListData" :key="character.id"
+      <CharacterCard v-for="character in store.charactersListData" :key="character.char_id"
       :character="character" />
     </div>
 
