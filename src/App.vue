@@ -22,11 +22,13 @@ export default {
 
   methods:{
     getCharacters(){
+      store.isLoaded = false
       axios.get(store.apiUrl)
       .then(result =>{
         console.log(result.data);
         //con la chiamata salvo i personaggi nell'array (che era vuoto)
         store.charactersListData = result.data
+        store.isLoaded = true
       })
       .catch(error=>{
         console.log(error);
