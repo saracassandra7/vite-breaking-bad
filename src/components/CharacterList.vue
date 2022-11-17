@@ -19,7 +19,12 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container bg-white p-5">
+    <div class="row">
+      <div class="sc-col col text-white pt-3 d-flex align-items-center">
+        <p class="fw-bold fs-5">Found {{store.charactersListData.length}} characters</p>
+      </div>
+    </div>
     <div class="row">
       <CharacterCard v-for="character in store.charactersListData" :key="character.id"
       :character="character" />
@@ -28,6 +33,12 @@ export default {
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+
+.sc-col{
+  background-color: #212529;
+  margin: 0 auto;
+  height: 60px;
+}
 
 </style>
