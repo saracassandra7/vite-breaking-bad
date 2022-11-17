@@ -6,9 +6,11 @@ export default {
 </script>
 
 <template>
-  
+  <header class="text-white m-3">
+    <h1>Breaking Bad Api</h1>
+  </header>
 </template>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

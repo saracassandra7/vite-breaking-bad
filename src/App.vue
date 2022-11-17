@@ -17,8 +17,10 @@ export default {
 
 <template>
   <AppHeader/>
-  <AppSelect/>
-  <CharacterList/>
+  <main>
+    <AppSelect/>
+    <CharacterList/>
+  </main>
 </template>
 
 <style lang="scss">
