@@ -23,7 +23,11 @@ export default {
   methods:{
     getCharacters(){
       store.isLoaded = false
-      axios.get(store.apiUrl)
+      axios.get(store.apiUrl, {
+        params:{
+          category: store.CategoryToSelect
+        }
+      })
       .then(result =>{
         console.log(result.data);
         //con la chiamata salvo i personaggi nell'array (che era vuoto)
@@ -46,7 +50,7 @@ export default {
 <template>
   <AppHeader/>
   <main>
-    <AppSelect/>
+    <AppSelect @startSelect="getCharacters()" />
     <CharacterList/>
   </main>
 </template>

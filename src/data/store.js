@@ -6,5 +6,7 @@ export const store = reactive({
   //array vuoto in cui salvare i dati di result
   charactersListData: [],
 
-  isLoaded: false
+  isLoaded: false,
+
+  CategoryToSelect: ''
 })

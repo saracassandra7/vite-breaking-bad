@@ -1,17 +1,24 @@
 <script>
+import {store} from '../data/store'
+
 export default {
-  name: 'AppSelect'
+  name: 'AppSelect',
+
+  data(){
+    return{
+      store
+    }
+  }
 
 }
 </script>
 
 <template>
 <div class="container mt-5 mb-4">
-  <select class="form-select" aria-label="Default select example">
-  <option selected>Select category</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
+  <select @change="$emit('startSelect')" v-model="store.CategoryToSelect" class="form-select" aria-label="Default select example">
+  <option value="" selected>Select category</option>
+  <option value="breaking bad">Breaking Bad</option>
+  <option value="better call saul">Better Call Saul</option>
 </select>
 </div>
   
